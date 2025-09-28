@@ -19,14 +19,14 @@
         .price-container { margin: 20px 0; }
         .current-price { font-size: 2.5em; font-weight: bold; color: #2ecc71; }
         .old-price { font-size: 1.4em; color: #95a5a6; text-decoration: line-through; margin-left: 15px; }
-        .description { font-size: 1.1em; line-height: 1.7; color: #555; }
+        /* Rozwijany Opis */
+        .description { font-size: 1.1em; line-height: 1.7; color: #555; max-height: 210px; /* Wysokość dla ok. 8-9 linii tekstu */ overflow: hidden; position: relative; transition: max-height 0.5s ease-in-out; }
+        .description.expanded { max-height: 1000px; /* Duża wartość, aby pomieścić cały tekst */ }
+        .read-more-btn { background: none; border: none; color: #3498db; cursor: pointer; font-weight: bold; padding: 10px 0; display: block; margin-top: 10px; }
+        /* Przycisk Zakupu */
         .buy-button { display: block; width: 100%; padding: 20px; background: linear-gradient(145deg, #f53d5a, #fa5438); color: white; text-align: center; text-decoration: none; font-size: 1.5em; font-weight: bold; border-radius: 8px; margin-top: 30px; transition: transform 0.2s, box-shadow 0.2s; border: none; }
         .buy-button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245, 61, 90, 0.4); }
         .urgency-text { text-align: center; margin-top: 10px; color: #e74c3c; font-weight: bold; }
-        /* Trust Badges */
-        .trust-badges { display: flex; justify-content: space-around; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
-        .badge { text-align: center; font-size: 0.9em; color: #777; }
-        .badge-icon { font-size: 2em; margin-bottom: 5px; }
         /* Stopka */
         .footer_section { text-align: center; margin-top: 40px; padding-top: 20px; font-size: 0.9em; color: #777; }
         .footer_section p { margin: 5px 0; }
@@ -49,16 +49,12 @@
                     <span class="current-price">85.72 zł</span>
                     <span class="old-price">111.44 zł</span>
                 </div>
-                <div class="description">
+                <div class="description" id="productDescription">
                     <p>Masz dość nudnych treningów i braku efektów? Chcesz wymodelować talię, ale tradycyjne hula hoop ciągle spada, odbierając całą przyjemność z ćwiczeń? <br><br>Oto Twoja domowa rewolucja w fitnessie! Inteligentne Hula Hoop HHW01 to urządzenie, które dopasowuje się idealnie do Ciebie. Dzięki innowacyjnej konstrukcji z regulacją obwodu, hula hoop nigdy nie spadnie – nawet jeśli dopiero zaczynasz swoją przygodę! <br><br>**Trening i relaksujący masaż w jednym?** Tak! Wbudowane, amortyzujące wypustki masują Twoją talię 360° podczas każdego obrotu, rozbijając tkankę tłuszczową i przynosząc ulgę spiętym mięśniom. <br><br>**Spalaj kalorie 3x szybciej!** Już 30 minut treningu z obciążeniem grawitacyjnym to tyle, co 3 godziny biegania. Wzmacniaj mięśnie brzucha, ud i pośladków, oglądając ulubiony serial. <br><br>**Dopasuj trening do siebie.** Reguluj długość paska z obciążeniem, aby zwiększać intensywność ćwiczeń wraz z postępami. To sprzęt, który rośnie razem z Twoją kondycją. Idealny dla dorosłych i dla dzieci. <br><br>**Co zyskujesz?**<br>- Smukła talia i płaski brzuch<br>- Redukcja cellulitu i jędrne pośladki<br>- Lepsza postawa i samopoczucie<br><br>Zamień frustrację na zabawę i osiągaj wymarzone efekty bez wychodzenia z domu!</p>
                 </div>
-                <a href="https://buy.stripe.com/28EcN79fq6AXaYT6fn4ko0u" class="buy-button">🔥 TAK, CHCĘ SWOJE HULA HOOP! 🔥</a>
+                <button onclick="toggleDescription()" class="read-more-btn" id="readMoreBtn">Czytaj więcej...</button>
+                <a href="https://buy.stripe.com/eVqeVfaju3oL5EzcDL4ko0v" class="buy-button">🔥 TAK, CHCĘ SWOJE HULA HOOP! 🔥</a>
                 <p class="urgency-text">Ostatnie sztuki w promocyjnej cenie!</p>
-                <div class="trust-badges">
-                    <div class="badge"><div class="badge-icon">💳</div>Bezpieczna Płatność</div>
-                    <div class="badge"><div class="badge-icon">🚚</div>Szybka Wysyłka 24h</div>
-                    <div class="badge"><div class="badge-icon">🇵🇱</div>Polska Gwarancja</div>
-                </div>
             </div>
         </div>
     </div>
@@ -71,20 +67,31 @@
     </div>
 
     <script>
+        // --- Skrypt Galerii ---
         function changeImage(imageUrl, thumbElement) {
             document.getElementById('mainImage').src = imageUrl;
-            // Opcjonalnie: podświetlenie aktywnej miniaturki
             const thumbnails = document.querySelectorAll('.thumbnails img');
             thumbnails.forEach(thumb => thumb.classList.remove('active'));
             thumbElement.classList.add('active');
         }
-        // Ustawienie pierwszej miniaturki jako aktywnej na starcie
         window.onload = () => {
             const firstThumbnail = document.querySelector('.thumbnails img');
             if(firstThumbnail) {
                 firstThumbnail.classList.add('active');
             }
         };
+
+        // --- Skrypt Rozwijanego Opisu ---
+        function toggleDescription() {
+            const description = document.getElementById('productDescription');
+            const btn = document.getElementById('readMoreBtn');
+            description.classList.toggle('expanded');
+            if (description.classList.contains('expanded')) {
+                btn.textContent = 'Zwiń opis';
+            } else {
+                btn.textContent = 'Czytaj więcej...';
+            }
+        }
     </script>
 </body>
 </html>
