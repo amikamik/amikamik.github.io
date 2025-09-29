@@ -4,44 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; background-color: #f4f4f9; color: #333; }
-        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; }
-        h1 { font-size: 2.2em; color: #1a1a1a; }
-        h2 { font-size: 1.5em; color: #555; }
-        .price-container { margin-bottom: 20px; }
-        .current-price { font-size: 2em; font-weight: bold; color: #2ecc71; }
-        .old-price { font-size: 1.2em; color: #95a5a6; text-decoration: line-through; margin-left: 15px; }
-        .buy-button { display: block; width: 100%; padding: 15px; background-color: #3498db; color: white; text-align: center; text-decoration: none; font-size: 1.2em; border-radius: 5px; margin-top: 20px; transition: background-color 0.3s; }
-        .buy-button:hover { background-color: #2980b9; }
-        .description { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
-        .footer_section { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #777; }
-        .footer_section p { margin: 5px 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 20px; }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background-color: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        /* Galeria */
+        .gallery-container a { display: block; margin-bottom: 10px; }
+        .gallery-container img { width: 100%; border-radius: 4px; border: 2px solid #ddd; }
+        .main-image-container { margin-bottom: 15px; }
+        /* Info o produkcie */
+        .product-info h1 { font-size: 2.4em; margin-top: 0; line-height: 1.2; }
+        .price-container { margin: 20px 0; }
+        .current-price { font-size: 2.5em; font-weight: bold; color: #2ecc71; }
+        .old-price { font-size: 1.4em; color: #95a5a6; text-decoration: line-through; margin-left: 15px; }
+        /* Rozwijany Opis */
+        .description { font-size: 1.1em; line-height: 1.7; color: #555; max-height: 125px; overflow: hidden; position: relative; transition: max-height 0.5s ease-in-out; }
+        .description.expanded { max-height: 1500px; }
+        .read-more-btn { background: none; border: none; color: #3498db; cursor: pointer; font-weight: bold; padding: 10px 0; display: block; margin-top: 10px; }
+        /* Przycisk Zakupu */
+        .buy-button { display: block; width: 100%; padding: 20px; background: linear-gradient(145deg, #f53d5a, #fa5438); color: white; text-align: center; text-decoration: none; font-size: 1.5em; font-weight: bold; border-radius: 8px; margin-top: 30px; transition: transform 0.2s, box-shadow 0.2s; border: none; }
+        .buy-button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245, 61, 90, 0.4); }
+        .urgency-text { text-align: center; margin-top: 10px; color: #e74c3c; font-weight: bold; }
+        /* Stopka */
+        .footer_section { text-align: center; margin-top: 40px; padding-top: 20px; font-size: 0.9em; color: #777; }
+        /* Responsywność */
+        @media (max-width: 900px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg</h1>
-        <img src="https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg" alt="https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg">
-        <h2>https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg</h2>
-        <div class="price-container">
-            <span class="current-price">85.72 zł</span>
-            <span class="old-price">111.44 zł</span>
+        <div class="product-grid">
+            <div class="gallery-container" id="lightgallery">
+                
+                <a href="https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg">
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg" alt="Zdjęcie produktu 1">
+                </a>
+                
+            </div>
+            <div class="product-info">
+                <h1>https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg</h1>
+                <div class="price-container">
+                    <span class="current-price">85.72 zł</span>
+                    <span class="old-price">111.44 zł</span>
+                </div>
+                <div class="description" id="productDescription">
+                    <p>https://www.cgrot.pl/img/product_media/4001-5000/img_12(64).jpg</p>
+                </div>
+                <button onclick="toggleDescription()" class="read-more-btn" id="readMoreBtn">Czytaj więcej...</button>
+                <a href="https://buy.stripe.com/14AcN7fDO4sP2sn7jr4ko0E" class="buy-button">🔥 TAK, CHCĘ ZADBAĆ O ZDROWIE! 🔥</a>
+                <p class="urgency-text">Ostatnie sztuki w promocyjnej cenie!</p>
+            </div>
         </div>
-        
-        <div class="description">
-            <p>https://www.cgrot.pl/img/product_media/4001-5000/img_12(64).jpg</p>
-        </div>
-        <a href="https://buy.stripe.com/8x29AVbny0cz6ID47f4ko0D" class="buy-button">KUP TERAZ - Bezpieczna Płatność</a>
     </div>
     <div class="footer_section">
         <p>Sprzedawca: Amadeusz Wieczorek</p>
         <p>Grunwaldzka 10d/5</p>
         <p>Kontakt e-mail: amadeuszwieczorek@gmail.com</p>
-        <p>
-            <a href="regulamin.html">Regulamin</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-        </p>
+        <p><a href="regulamin.html">Regulamin</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script>
+        // Inicjalizacja Galerii
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgThumbnail],
+            thumbnail: true,
+            selector: 'a'
+        });
+
+        // Skrypt Rozwijanego Opisu
+        function toggleDescription() {
+            const description = document.getElementById('productDescription');
+            const btn = document.getElementById('readMoreBtn');
+            description.classList.toggle('expanded');
+            btn.textContent = description.classList.contains('expanded') ? 'Zwiń opis' : 'Czytaj więcej...';
+        }
+    </script>
 </body>
 </html>
