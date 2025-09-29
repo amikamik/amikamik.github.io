@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoja Droga do Zdrowia i Płaskiego Brzucha: Inteligentne Hula Hoop!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css"/>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: #f8f9fa; color: #333; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 20px; }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background-color: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+        .main-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; border: 1px solid #eee; cursor: pointer; }
+        .thumbnails { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+        .thumbnails img { width: 100%; border-radius: 4px; cursor: pointer; border: 2px solid #ddd; transition: all 0.2s; aspect-ratio: 1 / 1; object-fit: cover; }
+        .thumbnails img:hover, .thumbnails img.active { border-color: #1abc9c; transform: scale(1.05); }
+        .product-info h1 { font-size: 2.4em; margin-top: 0; line-height: 1.2; font-weight: 700; }
+        .price-container { margin: 20px 0; }
+        .current-price { font-size: 2.5em; font-weight: bold; color: #1abc9c; }
+        .shipping-info { margin-top: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 8px; }
+        .shipping-info h3 { margin: 0; font-size: 1.2em; color: #2c3e50; }
+        .shipping-info-toggle { font-size: 0.9em; color: #3498db; cursor: pointer; text-decoration: underline; }
+        .shipping-details { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out; }
+        .shipping-details.expanded { max-height: 500px; margin-top: 15px; }
+        .description { font-size: 1.1em; line-height: 1.7; color: #555; max-height: 125px; overflow: hidden; position: relative; transition: max-height 0.5s ease-in-out; }
+        .description.expanded { max-height: 1500px; }
+        .read-more-btn { background: none; border: none; color: #1abc9c; cursor: pointer; font-weight: bold; padding: 10px 0; display: block; margin-top: 10px; font-size: 1em; }
+        .buy-button { display: block; width: 100%; padding: 20px; background: linear-gradient(145deg, #1abc9c, #16a085); color: white; text-align: center; text-decoration: none; font-size: 1.5em; font-weight: bold; border-radius: 8px; margin-top: 30px; transition: transform 0.2s, box-shadow 0.2s; border: none; }
+        .buy-button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(22, 160, 133, 0.3); }
+        .trust-badges { display: flex; justify-content: space-around; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+        .badge { text-align: center; font-size: 0.9em; color: #777; }
+        .badge-icon { font-size: 2em; margin-bottom: 8px; }
+        .footer_section { text-align: center; margin-top: 40px; padding-top: 20px; font-size: 0.9em; color: #777; }
+        @media (max-width: 900px) { .product-grid { grid-template-columns: 1fr; } }
+        #lightgallery-links { display: none; }
+    </style>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2369850443532061');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2369850443532061&ev=PageView&noscript=1"
+    /></noscript>
+    </head>
+<body>
+    <div class="container">
+        <div class="product-grid">
+            <div class="gallery-container">
+                <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_4(155).jpg" alt="Twoja Droga do Zdrowia i Płaskiego Brzucha: Inteligentne Hula Hoop!" id="mainImage" class="main-image" onclick="openGallery(0)">
+                <div class="thumbnails">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_4(155).jpg" alt="Miniatura zdjęcia 1" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_4(155).jpg', this, 0)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_5(155).jpg" alt="Miniatura zdjęcia 2" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_5(155).jpg', this, 1)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_1(163).jpg" alt="Miniatura zdjęcia 3" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_1(163).jpg', this, 2)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_2(161).jpg" alt="Miniatura zdjęcia 4" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_2(161).jpg', this, 3)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_3(155).jpg" alt="Miniatura zdjęcia 5" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_3(155).jpg', this, 4)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_9(118).jpg" alt="Miniatura zdjęcia 6" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_9(118).jpg', this, 5)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_11(84).jpg" alt="Miniatura zdjęcia 7" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_11(84).jpg', this, 6)">
+                    
+                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img_13(50).jpg" alt="Miniatura zdjęcia 8" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img_13(50).jpg', this, 7)">
+                    
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Twoja Droga do Zdrowia i Płaskiego Brzucha: Inteligentne Hula Hoop!</h1>
+                <div class="price-container">
+                    <span class="current-price">99.00 zł</span>
+                </div>
+                <div class="shipping-info">
+                    <h3>🚚 Darmowa Wysyłka Kurierska</h3>
+                    <span class="shipping-info-toggle" onclick="toggleShippingDetails()">(Więcej informacji)</span>
+                    <div class="shipping-details" id="shippingDetails">
+                        <p>Wysyłka produktu nastąpi na adres podany w formularzu zamówienia. Po dokonaniu płatności, otrzymasz automatyczny e-mail z potwierdzeniem od Stripe. W ciągu dwóch dni roboczych od zlecenia wysyłki, na wskazany adres e-mail wyślemy Ci link do śledzenia Twojej przesyłki.</p>
+                    </div>
+                </div>
+                <div class="description" id="productDescription">
+                    <p>Siedzący tryb życia daje o sobie znać? Czujesz, że brakuje Ci energii, a tradycyjne ćwiczenia są nudne i szybko tracisz motywację? To problem, który dotyka tysięcy osób – ale mamy na to rozwiązanie, które zamieni Twój trening w czystą przyjemność. <br><br>Odkryj HHW01 – inteligentne hula hoop, które rewolucjonizuje domowy fitness! Zapomnij o frustracji związanej z ciągłym spadaniem obręczy. Nasz model, dzięki idealnemu dopasowaniu do talii, pozostaje na swoim miejscu, pozwalając Ci skupić się na tym, co najważniejsze – na Tobie i Twoim zdrowiu. <br><br>**Poczuj, jak Tłuszcz Spala Się Sam!**<br>Podczas gdy Ty świetnie się bawisz, kręcąc w rytm ulubionej muzyki, piłka grawitacyjna wykonuje intensywną pracę za Ciebie. Już 30 minut takiego treningu spala kalorie jak 3 godziny biegania! Wzmacniasz mięśnie głębokie brzucha, co jest kluczowe dla zdrowego kręgosłupa i prawidłowej postawy. <br><br>**Masaż, który Ujędrnia i Relaksuje**<br>Specjalne, amortyzujące wypustki masują Twoją talię 360°, poprawiając krążenie krwi, pomagając w walce z cellulitem i przynosząc ulgę po całym dniu. To nie tylko trening – to Twój codzienny rytuał zdrowia i relaksu. <br><br>**Co zyskujesz dla swojego zdrowia?**<br>- Wzmocniony gorset mięśniowy dla zdrowego kręgosłupa<br>- Lepszy przepływ krwi i więcej energii na co dzień<br>- Poprawa postawy i redukcja napięć<br>- Smukła talia i płaski brzuch jako przyjemny efekt uboczny!<br><br>Zainwestuj w swoje zdrowie w sposób, który pokochasz. Dodaj HHW01 do koszyka i zacznij swoją transformację już dziś!</p>
+                </div>
+                <button onclick="toggleDescription()" class="read-more-btn" id="readMoreBtn">Czytaj więcej...</button>
+                <a href="https://buy.stripe.com/28E3cx3V68J59UPavD4ko0S" class="buy-button">TAK, CHCĘ ZADBAĆ O ZDROWIE!</a>
+                <div class="trust-badges">
+                    <div class="badge"><div class="badge-icon">🛡️</div>Bezpieczna Płatność</div>
+                    <div class="badge"><div class="badge-icon">📦</div>Szybka Wysyłka</div>
+                    <div class="badge"><div class="badge-icon">🌿</div>Gwarancja Jakości</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_section">
+        <p>Sprzedawca: Amadeusz Wieczorek</p>
+        <p>Grunwaldzka 10d/5</p>
+        <p>Kontakt e-mail: amadeuszwieczorek@gmail.com</p>
+        <p><a href="regulamin.html">Regulamin</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+
+    <div id="lightgallery-links">
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_4(155).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_5(155).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_1(163).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_2(161).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_3(155).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_9(118).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_11(84).jpg"></a>
+        
+        <a href="https://www.cgrot.pl/img/product_media/4001-5000/img_13(50).jpg"></a>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script>
+        const galleryContainer = document.getElementById('lightgallery-links');
+        const gallery = lightGallery(galleryContainer);
+        let currentImageIndex = 0;
+        function openGallery(index) {
+            currentImageIndex = index;
+            gallery.openGallery(index);
+        }
+        function changeImage(imageUrl, thumbElement, index) {
+            document.getElementById('mainImage').src = imageUrl;
+            currentImageIndex = index;
+            document.querySelectorAll('.thumbnails img').forEach(thumb => thumb.classList.remove('active'));
+            thumbElement.classList.add('active');
+        }
+        window.onload = () => {
+            const firstThumbnail = document.querySelector('.thumbnails img');
+            if(firstThumbnail) firstThumbnail.classList.add('active');
+            document.getElementById('mainImage').addEventListener('click', () => {
+                openGallery(currentImageIndex);
+            });
+        };
+        function toggleDescription() {
+            const description = document.getElementById('productDescription');
+            const btn = document.getElementById('readMoreBtn');
+            description.classList.toggle('expanded');
+            btn.textContent = description.classList.contains('expanded') ? 'Zwiń opis' : 'Czytaj więcej...';
+        }
+        function toggleShippingDetails() {
+            const details = document.getElementById('shippingDetails');
+            details.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
