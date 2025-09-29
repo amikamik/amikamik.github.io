@@ -41,8 +41,6 @@
                 <img src="https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg" alt="https://www.cgrot.pl/img/product_media/4001-5000/img_10(103).jpg" id="mainImage" class="main-image">
                 <div class="thumbnails">
                     
-                    <img src="https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg" alt="Miniatura zdjęcia" onclick="changeImage('https://www.cgrot.pl/img/product_media/4001-5000/img(161).jpg', this)">
-                    
                 </div>
             </div>
             <div class="product-info">
@@ -55,11 +53,45 @@
                     <p>https://www.cgrot.pl/img/product_media/4001-5000/img_12(64).jpg</p>
                 </div>
                 <button onclick="toggleDescription()" class="read-more-btn" id="readMoreBtn">Czytaj więcej...</button>
-                <a href="https://buy.stripe.com/cNiaEZ63e5wTgjdeLT4ko0z" class="buy-button">🔥 TAK, CHCĘ SWOJE HULA HOOP! 🔥</a>
+                <a href="https://buy.stripe.com/aFa5kFezKf7tff933b4ko0A" class="buy-button">🔥 TAK, CHCĘ SWOJE HULA HOOP! 🔥</a>
                 <p class="urgency-text">Ostatnie sztuki w promocyjnej cenie!</p>
             </div>
         </div>
     </div>
 
     <div class="footer_section">
-        <p>
+        <p>Sprzedawca: Amadeusz Wieczorek</p>
+        <p>Grunwaldzka 10d/5</p>
+        <p>Kontakt e-mail: amadeuszwieczorek@gmail.com</p>
+        <p><a href="regulamin.html">Regulamin</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+
+    <script>
+        // --- Skrypt Galerii ---
+        function changeImage(imageUrl, thumbElement) {
+            document.getElementById('mainImage').src = imageUrl;
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbElement.classList.add('active');
+        }
+        window.onload = () => {
+            const firstThumbnail = document.querySelector('.thumbnails img');
+            if(firstThumbnail) {
+                firstThumbnail.classList.add('active');
+            }
+        };
+
+        // --- Skrypt Rozwijanego Opisu ---
+        function toggleDescription() {
+            const description = document.getElementById('productDescription');
+            const btn = document.getElementById('readMoreBtn');
+            description.classList.toggle('expanded');
+            if (description.classList.contains('expanded')) {
+                btn.textContent = 'Zwiń opis';
+            } else {
+                btn.textContent = 'Czytaj więcej...';
+            }
+        }
+    </script>
+</body>
+</html>
