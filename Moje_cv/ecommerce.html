@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doświadczenie E-commerce - Amadeusz Wieczorek</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p, li {
+            font-size: 16px;
+        }
+        b {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Doświadczenie: Właściciel małego Biznesu E-commerce</h1>
+        <h2>Działalność Własna: Automatyzacja Sprzedaży w Modelu Dropshipping</h2>
+        
+        <h3>Model Biznesowy i Skala Działania</h3>
+        <p>
+            Celem projektu było stworzenie skalowalnego modelu biznesowego w oparciu o statystykę i prawo wielkich liczb. Po uzyskaniu dostępu do feedów produktowych od kilkudziesięciu hurtowni, zarządzałem katalogiem setek tysięcy produktów. Strategia polegała na masowym listowaniu dziesiątek tysięcy ofert na platformach sprzedażowych w celu maksymalizacji ekspozycji i sprzedaży.
+        </p>
+
+        <h3>Problem i Potrzeba Stworzenia Własnych Narzędzi</h3>
+        <p>
+            Standardowe oprogramowanie typu SaaS (np. BaseLinker) oraz oficjalne API platform sprzedażowych (np. OLX) okazały się niewystarczające do obsługi tak dużej skali operacji i specyficznych potrzeb modelu biznesowego. Wymusiło to konieczność stworzenia własnych, dedykowanych rozwiązań do automatyzacji kluczowych procesów.
+        </p>
+
+        <h3>Stworzone Narzędzia i Automatyzacje</h3>
+        
+        <h4>1. Zautomatyzowany System Listowania Produktów</h4>
+        <p>
+            Stworzyłem oprogramowanie w Pythonie, które automatyzowało proces dodawania produktów na platformę OLX. Kluczową funkcją była obsługa unikalnego modelu "Zapłać, jeśli sprzedasz", co pozwoliło na prowadzenie działalności na dużą skalę przy minimalnym wkładzie finansowym.
+        </p>
+
+        <h4>2. Kategoryzator Produktów Oparty na AI</h4>
+        <p>
+            W odpowiedzi na rygorystyczne wymagania dotyczące kategoryzacji przy masowym listowaniu, zbudowałem własny system kategoryzujący. Narzędzie wykorzystywało API OpenAI do kilkukrotnej weryfikacji i przypisywania kategorii, osiągając <b>95% skuteczności</b> w porównaniu do ok. 60% skuteczności kategoryzatora platformy. Projekt ten jest dostępny jako osobne repozytorium na moim GitHubie.
+        </p>
+        
+        <h4>3. "Fabryka" Stron Produktowych z Integracją Płatności</h4>
+        <ul>
+            <li>Zaprojektowanie skryptu w Pythonie, który na podstawie danych z pliku CSV masowo generuje statyczne strony produktowe przy użyciu szablonów Jinja2.</li>
+            <li>Implementacja automatycznej integracji z API systemu płatności Stripe w celu dynamicznego tworzenia produktów, cenników i unikalnych linków do płatności dla każdej strony.</li>
+            <li>Stworzenie zautomatyzowanego procesu wdrożenia (CI/CD), w którym skrypt po wygenerowaniu stron samodzielnie publikuje je w internecie za pomocą komend Git.</li>
+        </ul>
+
+        <h3>Wynik Projektu</h3>
+        <p>
+            Opracowane narzędzia z powodzeniem zautomatyzowały kluczowe aspekty działalności i potwierdziły skuteczność przyjętej strategii. Dalsze skalowanie projektu zostało jednak wstrzymane przez ograniczenia techniczne zewnętrznej platformy sprzedażowej, która nie była przystosowana do obsługi kont o tak dużej skali. Projekt dostarczył cennych wniosków na temat ograniczeń platform SaaS i potwierdził skuteczność autorskich narzędzi w automatyzacji.
+        </p>
+
+        <h3>Wykorzystane Technologie i Narzędzia</h3>
+        <ul>
+            <li><b>Języki i Biblioteki:</b> Python, Pandas, Jinja2.</li>
+            <li><b>Platformy Reklamowe:</b> Google Ads, Facebook Ads.</li>
+            <li><b>Systemy i Platformy:</b> BaseLinker, Responso.</li>
+            <li><b>Integracje API:</b> OpenAI API, OLX API, Stripe API.</li>
+            <li><b>Inne:</b> Git, GitHub Pages, MS Excel.</li>
+        </ul>
+
+    </div>
+</body>
+</html>
